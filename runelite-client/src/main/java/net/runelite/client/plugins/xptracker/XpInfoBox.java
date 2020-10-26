@@ -320,6 +320,7 @@ class XpInfoBox extends JPanel
 		topRightStat.setText(htmlLabel(xpTrackerConfig.xpPanelLabel2(), xpSnapshotSingle));
 		bottomLeftStat.setText(htmlLabel(xpTrackerConfig.xpPanelLabel3(), xpSnapshotSingle));
 		bottomRightStat.setText(htmlLabel(xpTrackerConfig.xpPanelLabel4(), xpSnapshotSingle));
+		bottomRightStat.setText(htmlLabel(xpTrackerConfig.xpPanelLabel5(), xpSnapshotSingle));
 	}
 
 	static String htmlLabel(XpPanelLabel panelLabel, XpSnapshotSingle xpSnapshotSingle)

@@ -49,6 +49,11 @@ public interface XpTrackerService
 	XpActionType getActionType(Skill skill);
 
 	/**
+	 * Get the amount of xp per min
+	 */
+	int getXpMin(Skill skill);
+
+	/**
 	 * Get the amount of xp per hour
 	 */
 	int getXpHr(Skill skill);
