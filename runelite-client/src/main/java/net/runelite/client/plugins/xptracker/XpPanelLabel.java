@@ -36,6 +36,7 @@ public enum XpPanelLabel
 	TIME_TO_LEVEL("TTL", XpSnapshotSingle::getTimeTillGoalShort),
 
 	XP_GAINED("XP Gained", snap -> format(snap.getXpGainedInSession())),
+	XP_MINUTE("XP/min", snap -> format(snap.getXpPerMin())),
 	XP_HOUR("XP/hr", snap -> format(snap.getXpPerHour())),
 	XP_LEFT("XP Left", snap -> format(snap.getXpRemainingToGoal())),
 

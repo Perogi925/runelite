@@ -55,6 +55,7 @@ class XpPanel extends PluginPanel
 	private final Map<Skill, XpInfoBox> infoBoxes = new HashMap<>();
 
 	private final JLabel overallExpGained = new JLabel(XpInfoBox.htmlLabel("Gained: ", 0));
+	private final JLabel overallExpMin = new JLabel(XpInfoBox.htmlLabel("Per minute: ", 0));
 	private final JLabel overallExpHour = new JLabel(XpInfoBox.htmlLabel("Per hour: ", 0));
 
 	private final JPanel overallPanel = new JPanel();
@@ -114,9 +115,11 @@ class XpPanel extends PluginPanel
 		overallInfo.setBorder(new EmptyBorder(0, 10, 0, 0));
 
 		overallExpGained.setFont(FontManager.getRunescapeSmallFont());
+		overallExpMin.setFont(FontManager.getRunescapeSmallFont());
 		overallExpHour.setFont(FontManager.getRunescapeSmallFont());
 
 		overallInfo.add(overallExpGained);
+		overallInfo.add(overallExpMin);
 		overallInfo.add(overallExpHour);
 
 		overallPanel.add(overallIcon, BorderLayout.WEST);
@@ -204,6 +207,7 @@ class XpPanel extends PluginPanel
 	private void rebuildAsync(XpSnapshotSingle xpSnapshotTotal)
 	{
 		overallExpGained.setText(XpInfoBox.htmlLabel("Gained: ", xpSnapshotTotal.getXpGainedInSession()));
+		overallExpMin.setText(XpInfoBox.htmlLabel("Per Minute", xpSnapshotTotal.getXpPerMin()));
 		overallExpHour.setText(XpInfoBox.htmlLabel("Per hour: ", xpSnapshotTotal.getXpPerHour()));
 	}
 
